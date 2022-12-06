@@ -9,11 +9,15 @@ cp ./config__files/ssh/Banner /etc/Banner
 
 # Redemarrer le service sshd
 
-systemctl restart sshd
-
 USER="usertest1"
 
 PASSWORD="Respons11"
 
+SSHKEY=""
+
 useradd -p ${PASSWORD} -m -d /home/${USER} ${USER}
 usermod -aG sudo ${USER}
+
+echo ${SSHKEY} >> ~/.ssh/authorized_keys
+
+systemctl restart sshd
