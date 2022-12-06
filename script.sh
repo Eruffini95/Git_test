@@ -1,5 +1,5 @@
 #!/bin/bash
-NEW_USERS="/home/script/user"
+NEW_USERS="/home/ubuntu/Git_test/script.sh"
 HOME_BASE="/home/"
 cat ${NEW_USERS} | \
 while read USER PASSWORD
